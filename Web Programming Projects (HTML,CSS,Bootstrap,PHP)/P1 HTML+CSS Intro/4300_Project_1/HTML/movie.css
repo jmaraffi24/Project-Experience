@@ -1,0 +1,232 @@
+/*
+ * movie.css 
+ * CSS file that controls most stylelized information about the webpage.
+ * CSCI 4300
+ * Project 1
+ * Team Members: Mahdi Ghafouri, James Gong, Jacob Maraffi
+ */
+
+/*
+ * Name CSS Documentation
+ * Controls the style for the "Rancid Tomatoes" header along the top of the 
+ * webpage as well as the title of the Movie "TMNT (2007)". 
+ */
+.name{
+	margin-top: 72px;
+	text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    text-shadow: 2px 2px #999999;
+}
+
+/*
+* Header CSS Documentation
+* Controls style information for the header along the top of the webpage.
+*/
+.header {
+    background-image: url(rancidbannerbg.png);
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top:0;
+    left: 0;
+
+}
+
+/*
+ * Body CSS Documentation
+ * Controls font/text style for various elements stored within the body 
+ * of the webpage, header alignment, reviewer font size and style, also
+ * controls the background of the webpage.
+ */
+body{
+    
+    text-align: center;
+    font-family: "Verdana";
+    font-size: 8pt;
+	background-image: url("moviebg.png");
+	background-repeat: repeat;
+    
+}
+
+/*
+ * Box CSS Documentation
+ * Controls style information for the box container which surronds the main
+ * information of the webpage. 
+ */
+.box{
+    border: 4px solid grey;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #A2B964;
+    border-radius: 20px;
+}
+
+/*
+* Right CSS Documentation
+* Controls style information for the right side of the "box" container.
+*/
+.right{
+    width: 250px;
+    float: right;   
+}
+
+/*
+* Left CSS Documentation
+* Controls style information for the left side of the "box" container.
+*/
+.left{
+    background-image: url("moviebg.png");
+    width: 550px;
+    height: 1200px;
+    border-top-left-radius: 20px;
+}
+
+/*
+* Column 1 CSS Documentation
+* Controls style information for the first of two columns which make up the 
+* main review section in the center of the webpage. Column 1 is the left column.
+*/
+.c1{
+    float: left;
+    width: 47%;
+    padding-left: 2%
+}
+
+/*
+* Column 2 CSS Documentation
+* Controls style information for the second of two columns which make up the 
+* main review section in the center of the webpage. Column 2 is the right column.
+*/
+.c2{
+    width: 47%;
+    float: right;
+    padding-right: 2%;
+}
+
+/*
+* Quote CSS Documentation
+* Controls style information for the quotes stored within the columns.
+*/
+.quote{
+    border: 2px solid grey;
+    font-size: 8pt;
+    background-color: #E8DC9B;
+    padding: 8px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+/*
+* Critic CSS Documentation
+* Controls style for the Critic names and sources regarding the quotes
+* that are stored in the columns.
+*/
+.critic{
+    text-align: left;
+    margin-bottom: 20pt;
+}
+
+/*
+ * Description CSS Documentation
+ * Controls style aspects for the movie information/descriptions stored in the
+ * lower right-side green window below the movie poster image.
+ */
+.description{
+    margin-left: 30pt;
+    text-align: left;
+    padding-bottom: 10pt;
+    font-weight: bold;
+}
+
+/*
+ * Description Header CSS Documentation
+ * Controls style aspects for the movie information/headers stored in the lower
+ * right-side green window below the movie poster image.
+ */
+.description-header{
+    text-align: left;
+    padding-top: 10pt;
+    font-weight: bold;
+}
+
+/*
+ * Overview CSS Documentation
+ * Controls style information for the container which holds all the decriptions and 
+ * headers regarding the TMNT movie. This container is located in the lower
+ * right-side green window below the TMNT movie poster.
+ */
+#overview {
+    background-color: #A2B964;
+    font-size: 8pt;
+    font-family: sans-serif;
+    padding-left: 10pt;
+    padding-right: 10pt;
+}
+
+/*
+ * Score CSS Documentation
+ * Controls the style information for the header which contains the rotten
+ * tomatoes logo, and the percentage score of reviews.
+ */
+.score{
+    text-align: left;
+    background-image: url(rottenlargebg.png);
+    border-top-left-radius: 20px;
+}
+
+/*
+ * Percent CSS Documentation
+ * Controls style for the percentage results  (33%) of reviews along the header of 
+ * the box container.
+ */
+.percent{
+    color: red;
+    font-size: 48pt;
+    font-weight: bold;
+}
+
+/*
+ * Out CSS Documentation
+ * Controls style information for the "out of 88 reviews" text.
+ */
+.out{
+    color: white;
+    font-size: 8pt;  
+}
+
+/*
+ * CSS Documentation
+ *
+ */
+.quote+p:first-line{
+    font-style:normal;
+}
+.quote+p{
+    font-style:italic;
+}
+
+/*
+ * CSS Documentation
+ *
+ */
+img[alt="Critic"]{
+    float: left;
+}
+
+/*
+ * CSS Documentation
+ *
+ */
+p img{
+    padding-right: 5px;
+}
+
+/*
+ * CSS Documentation
+ *
+ */
+.holder{
+
+}
