@@ -1,0 +1,214 @@
+#include <fstream>
+#include <stdio.h>
+#include <iostream>
+#include <string>
+#include <DataType.h>
+#include <SortedLinkedList.h>
+
+/**
+ * Prints out a menu of possible commands.
+ */
+void printMenu(){
+    std::cout << "(i) - Insert value" << std::endl;
+    std::cout << "(d) - Delete value" << std::endl;
+    std::cout << "(s) - Search value" << std::endl;
+    std::cout << "(n) - Print next iterator" << std::endl;
+    std::cout << "(r) - Reset iterator" << std::endl;
+    std::cout << "(p) - Print list" << std::endl;
+    std::cout << "(l) - Print length" << std::endl;
+    std::cout << "(b) - Reverse" << std::endl;
+    std::cout << "(c) - Clear list" << std::endl;
+    std::cout << "(q) - Quit program" << std::endl;
+    std::cout << std::endl;
+}//printMenu
+
+int main(int argc, char ** argv){
+    //CODE BLOCK FOR TAKING INPUT FROM A TEXT FILE
+    SortedLinkedList list;
+    DataType item;
+    int input;
+    std::fstream fs;
+
+    fs.open(argv[1], std::fstream::in);
+    if(fs.is_open())
+    {
+        fs >> input;
+        while (!fs.eof())
+    {
+        item.initialize(input);
+        list.insertItem(item);
+        fs >> input;
+    }
+    } else {
+        std::cout << "Failed to open the input file" << std::endl;
+        return 0;
+    }
+    //CODE BLOCK FOR TAKING INPUT FROM A TEXT FILE
+
+    //control variable for breaking out of the while loop
+    bool quit = false;
+
+    //while loop that controls the acception of input from the user
+    while (!quit) {
+        //initialize input variable for each function
+        int num = 0;
+        int iterator = 0;
+        std::string command;
+        std::string extra = "";
+        
+        //initially taking input from the user in the form of a command
+        printMenu();
+        
+        std::cout << "Enter a command: ";
+        std::getline(std::cin, command);
+        
+        //if statement for insert value
+        if ((strcmp(command.c_str(), "i")) == 0)
+        {
+            //resetting variable for value of item to be inserted
+            num = 0;
+
+            //print function to print out all values in the list
+            list.printAll();
+
+            //taking in user input for the value of num
+            std::cout << "Enter number: ";
+            std:: cin >> num;
+
+            std::getline(std::cin, extra); //gets extra /n character
+
+            //creating a Datatype member item that has the value of num
+            DataType item(num);
+
+            //calling the fucntion insertItem with the item parameter
+            list.insertItem(item);
+
+            //print function to print out all values in the list
+            list.printAll();
+
+            std::cout << "command: " << command << std::endl;
+        
+        }//if
+
+        //if statement for delete value
+        else if ((strcmp(command.c_str(), "d")) == 0)
+        {
+            //resetting variable for value of item to be inserted
+            num = 0;
+
+            //print function to print out all values in the list
+            list.printAll();
+
+            //taking in user input for the value of num
+            std::cout << "Enter value to delete: ";
+            std::cin >> num;
+
+            std::getline(std::cin, extra); //gets extra /n character
+
+            //creating a Datatype member item that has the value of num
+            DataType item(num);
+            //item.initialize(num);
+
+            //calling the deleteItem function with the item parameter
+            list.deleteItem(item);
+
+            //print function to print out all values in the list
+            list.printAll();
+
+    }//else if
+
+    //if statement for search values
+    else if ((strcmp(command.c_str(), "s")) == 0)
+    {
+        //resetting variable for value of item to be inserted
+        num = 0;
+
+        //taking in user input for the value of num
+        std::cout << "Enter a value to search: " << std::endl;
+        std::cin >> num;
+
+        std::getline(std::cin, extra); //gets extra /n character
+
+        //creating a DataType member item that has the value of num
+        DataType item(num);
+
+        //calling the searchItem function
+        int index = list.searchItem(item);
+
+        if(index != -1){
+        std::cout << num << " was found in the list at index " << index << std::endl;
+        }//if
+        
+    }//else if
+
+    //if statement for print next iterator value
+    else if ((strcmp(command.c_str(), "n")) == 0)
+    {
+        //incrementing the value of iterator
+        list.iterator();
+    }//else if
+
+    //if statement for resetting the iterator value
+    else if ((strcmp(command.c_str(), "r")) == 0)
+    {
+        //resetting the value of iterator
+        list.resetIterator();
+    }//else if
+
+    //if statment for print list
+    else if ((strcmp(command.c_str(), "p")) == 0)
+    {
+        //print function to print out all values in the list
+        list.printAll();
+    }//else if
+
+    //if statement for print length
+    else if ((strcmp(command.c_str(), "l")) == 0)
+    {
+        //initializing length variable to the length of list
+        int length = list.length();
+
+        //returning the value of length to the user
+        std::cout << "List length is " << length << std::endl;
+
+    }//else if
+
+    //if statement for reverse list
+    else if ((strcmp(command.c_str(), "b")) == 0)
+    {
+        std::cout << "Before" << std::endl;
+
+        //print function to print out all vlaues in the List
+        list.printAll();
+
+        list.reverse();
+
+        std::cout << "After" << std::endl;
+
+        //print function ot print out all values in the list
+        list.printAll();
+
+    }//else if
+
+    //if statement for clear list
+    else if ((strcmp(command.c_str(), "c")) == 0)
+    {
+        list.clear();
+        std::cout << "List cleared" << std::endl;
+    }//else if
+
+    //if statement for quit program (Controls while loop)
+    else if ((strcmp(command.c_str(), "q")) == 0)
+    {
+        quit = true;
+        std::cout << "Quitting program..." << std::endl;
+    }
+    
+    else
+    {
+        std::cout << "Invalid Input. Try again." << std::endl;
+    }
+        
+      
+   }//while
+}//main
