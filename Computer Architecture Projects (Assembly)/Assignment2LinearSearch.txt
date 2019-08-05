@@ -1,0 +1,63 @@
+#ProgrammingAssignment2
+#Jacob Maraffi
+#811571598
+
+.data
+search: .asciiz "Enter a number to search for: "
+foundat: .asciiz "\nNumber found at index: "
+notfound: .asciiz "\nNumber not found in array"
+array: .word 0, 2, 4, 6, 8, 10
+
+.text
+main:
+	la $s1, array					#$s1 = address of array
+	
+	li $t1, 0 					#counter == 0
+	li $t2, 1 					#bool found/notfound  == 1
+	li $t3, 5 					#length = 5
+
+	li $v0, 4 					#print out search statement
+	la $a0, search
+	syscall
+
+	li $v0, 5 					#user input
+	move $t0, $v0					#store user input into $t0
+
+	j loop
+
+loop:
+	beq $t1, $t3, notfound 				#if the end of the array is reached go to notfound
+	lw $t4, 0($s1) 					#store array element into $t4
+	beq $t0, $t4, found 				#if the number is found go to found\
+
+iterate:
+	addi $s1, $s1, 4				#go to the next element of array
+	addi $t1, $t1, 1 				#counter++
+
+	j loop
+
+found:
+	li $v0, 4 					#print found statement
+	la $a0, foundat
+	syscall
+
+	li $v0, 1 					#print out target's index
+	move $a0, $t1
+	syscall
+
+	li $t5, 1 					#numberfound == 1
+
+	j iterate
+
+notfound:
+	beq $t5, $t2, exit 				#if numberfound == 1 (number in array = number in user input) jump to exit
+
+	li $v0, 4 					#print notfound statement
+	la $a0, notfound
+	syscall
+	
+	j exit
+
+exit:
+	li $v0, 10
+	syscall
