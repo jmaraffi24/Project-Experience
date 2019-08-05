@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+pageTwo.html
+This file containes the HTML file for the "Customer Registration" page of Team
+HereToMakeLinks' Art Store. This page is a large table with many form elements that 
+take in customer information to mimic the functionality of an equivalent online art store registration page. 
+CSCI 4300 Web Programming
+Team Name: HereToMakeLinks
+Team Members: Mahdi Ghafouri, James Gong, Jacob Maraffi
+-->
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8"/>
+        <title>Art Store - Customer Registration </title>
+        <link rel="stylesheet" href="project2.css">
+        <script>
+            function validation()
+            {
+                var fn = document.forms["RegForm"]["first"];
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <!--Div for the black header bar that goes across the top of the webpage -->
+            <div class="header">
+                <a class="HeaderText header" href="pageTwo.html">My Account</a>
+                <a class="HeaderText header" href="">Wish List</a>
+                <a class="HeaderText header" href="">Shopping Cart</a>
+                <a class="HeaderText header" href="">Checkout</a>
+            </div> 
+            <!--
+Div for the main heading of the page which contains "Art Store"
+-->
+            <span id="title">Art Store</span>
+            <!--
+Div for the controls tab below "Art Store" table
+-->
+            <div  class="box nav">
+                <a class="HeaderText nav" href="pageOne.html">Home</a>
+                <a class="HeaderText nav" href="">About Us</a>
+                <a class="HeaderText nav" href="">Art Works</a>
+                <a class="HeaderText nav" href="">Artists</a>
+            </div>
+            <!--
+Div for the box that contains most of the table and form elements that make up the Customer Registration Section.
+-->
+            <div id="main" class="box" >
+                <span id="name"> Customer Registration</span>
+                <form name = "RegForm" action="http://www.randyconnolly.com/tests/process.php" onsubmit="return validation()" method="get">
+                    <h3 class="detail">1. User Info</h3>
+                    <table>
+                        <tr class="ins">
+                            <td class="inputs"><span>First Name </span><input type="text" size=23 name="first"></td>
+                            <td class="inputs"><span>Last Name</span><input type="text" size=23 name="last"></td>
+                        </tr>
+                        <tr class="ins">
+                            <td class="inputs"><span>Email</span> <input type="text" size=70 name="email" placeholder="format for email is xxx@yyy.zzz"></td>
+                            <td></td>
+                        </tr>
+                        <tr class="ins">
+                            <td class="inputs"><span>Password</span> <input type="text" size=23 name="pass1" placeholder="at least 8 characters"></td>
+                            <td class="inputs"><span>Password Repeat</span> <input type="text" size=20 name="pass2" placeholder="at least 8 characters"></td>
+                        </tr>
+                    </table>
+                    <h3 class="detail">2. Location</h3>
+                    <table>
+                        <tr class="ins">
+                            <td class="inputs"><span>Address</span><input type="text" size=70 name="address"></td>
+                            <td></td><td></td>
+                        </tr>
+                        <tr class="ins">
+                            <td class="inputs"><span>City</span> <input type="text" size=23 name="city"></td>
+                            <td id="state" class="inputs"><span>State</span> <input type="text" size=8 name="state"></td>
+                            <td class="inputs"><span>Zip</span> <input type="text" size=15 name="zip"></td>
+                        </tr>
+                        <tr class="ins">
+                            <td class="inputs"><span>Phone</span> <input type="text" size=23 name="phone" placeholder="NNN-NNN-NNNN"></td>
+                            <td class="inputs"><span>Country</span> 
+                                <select id="country" name="country">
+                                    <option>Canada</option>
+                                    <option>Brazil</option>
+                                    <option>England</option>
+                                </select>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr class="ins">
+                            <td>
+                            <span>Continent</span>
+                                <ul id="continentList">
+                                    <li>
+                                        <input type="radio" name="continent" value="1">North America
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="continent" value="2">Europe
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="continent" value="3">South America
+                                    </li>
+                                </ul>
+                            </td>
+                            <td></td><td></td>
+                        </tr>
+                    </table>
+                    <h3 class="detail">3. Personal Details</h3>
+                    <table>
+                        <tr class="ins">
+                            <td class="inputs"><span>Birth Day</span><input type="date" id="bday" name="birthday"></td>
+                            <td class="inputs"><span>Favorite Color</span><input type="color" id="favoritecolor" name="color"></td>
+                        </tr>
+                        <tr class="ins">
+                            <td class="inputs"><span>Interest in Art</span><label>Minimal<input type="range" id="artinterest" name="interest" min="0" max="10">Love it!</label></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <h3 class="detail">4. All Done</h3>
+                    <span id="tos"><input type="checkbox" id="agree" name="accept">I agree to the <a class="link">Terms of the Site</a></span><br>
+                    <button type="submit" id="signup"><img src="button_ok.png" alt="okay"/>Sign me up!</button>
+                </form>
+            </div>
+            <!--
+Div that controls the black bar on the bottom of the screen
+-->
+            <div class ="footer">
+                <a class="HeaderText footer" href="">All images are copyright to their owners. This is just a hypothetical site 2014 Copyright Art Store</a>
+            </div>
+        </div>
+    </body>
+</html>
