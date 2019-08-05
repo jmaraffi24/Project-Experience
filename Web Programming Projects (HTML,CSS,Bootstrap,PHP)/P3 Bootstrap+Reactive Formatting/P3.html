@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Chapter 7</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/P3.css" />
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body class="container-fluid">
+        <header>
+            <div class="topHeaderRow">
+                <div class="container">
+                    <div class="">
+                        <ul class="nav justify-content-end">
+                            <li class="nav-item"><a class="nav-link active" href="#"> Logout</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#"> Profile</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#"> Favorites</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end topHeaderRow -->
+
+            <div class="holder">
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container">
+                        <a class="navbar-brand" href="#"><font color="white">Share Your Travels</font></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active"><a class="nav-link" href="#"><font color="white">Home</font></a></li>
+                                <li class="nav-item active"><a class="nav-link" href="#"><font color="white">About</font></a></li>
+                                <li class="nav-item active"><a class="nav-link" href="#"><font color="white">Contact</font></a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><font color="white">
+                                        Browse</font>
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Countries</a>
+                                        <a class="dropdown-item" href="#">Images</a>
+                                        <a class="dropdown-item" href="#">Posts</a>
+                                    </div>
+                                </li>
+                                <form class="form-inline my-2 my-lg-0">
+                                    <input class="form-control mr-sm-2" type="text"  placeholder="Search">
+                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
+                                </form>
+                            </ul>
+                        </div>
+                    </div>               
+                </nav>
+            </div> 
+        </header>
+        <!-- Page Content -->
+        <main class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-2">
+                    <div class="list-group">
+                        <div class="list-group-item top"><font color="white">Continents</font></div>
+                        <a class="list-group-item" href="#">Africa</a>
+                        <a class="list-group-item" href="#">Asia</a>
+                        <a class="list-group-item" href="#">Europe</a>
+                        <a class="list-group-item" href="#">North America</a>
+                        <a class="list-group-item" href="#">South America</a>
+                    </div>
+                    <div class="list-group">
+                        <div  class="list-group-item top"><font color=white>Popular</font></div>
+                        <a class="list-group-item" href="#">Canada</a>
+                        <a class="list-group-item" href="#">France</a>
+                        <a class="list-group-item" href="#">Italy</a>
+                        <a class="list-group-item" href="#">Germany</a>
+                        <a class="list-group-item" href="#">Ghana</a>
+                        <a class="list-group-item" href="#">Greece</a>
+                        <a class="list-group-item" href="#">Hungary</a>
+                        <a class="list-group-item" href="#">Spain</a>
+                        <a class="list-group-item" href="#">United States</a>
+                        <a class="list-group-item" href="#">United Kingdom</a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col">
+                            <img  src="images/8711645510.jpg" alt="Temple of Hephaistos">
+                            <p >Located on the western perimeter of Agora in Athens. Built in 460-415 BCE, it is the best preserved temple of antiquity. </p>
+                        </div>
+                        <div class="col">
+                            <h2>Temple of Hephaistos</h2>
+
+                            <div id="info">
+                                <ul id="unbulletedList">
+                                    <li>By: <a href="#">Ellie Sullivan</a></li>
+                                    <li>Country: <a href="#">Greece</a></li>
+                                    <li>City: <a href="#">Athens</a></li>
+                                    <li>Taken on: August 8, 2017</li>
+                                </ul>
+
+                            </div>
+
+                            <div class="btn-group" >
+                                <div >
+                                    <button type="button" class="button">&hearts;</button>
+                                </div>
+                                <div >
+                                    <button type="button" class="button">Download</button>
+                                </div>
+                                <div >
+                                    <button type="button" class="button">Print</button>
+                                </div> 
+                                <div >
+                                    <button type="button" class="button">Comment</button>
+                                </div>
+                            </div>
+
+                            <h4>Tags</h4>
+                            <div>
+                                <div id="tags">
+                                    <span >ancient</span>
+                                    <span >garden</span>
+                                    <span >hill</span>
+                                    <span >ruins</span>
+                                    <span >sunshine</span>
+                                    <span >temple</span>
+
+                                </div>
+                            </div>
+
+                        </div> 
+                    </div>
+
+
+
+
+                    <!-- Related Photos -->
+                    <div class="row">
+                        <div class="col">
+                            <h3>Related Photos</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+
+
+
+                        <div class="col">
+                            <div >
+                                <a href="#" >
+                                    <img src="images/related/8710320515.jpg" alt="">
+                                </a>                        
+                                <div >
+                                    <h6>Ekklisia Agii Isidori</h6>
+                                    <button type="button" > View</button>
+                                    <button type="button" > Favorite</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div >
+                                <a href="#" >
+                                    <img src="images/related/8710513053.jpg" alt="">
+                                </a>
+                                <div >
+                                    <h6>Theatre of Dionysos</h6>
+                                    <button type="button" > View</button>
+                                    <button type="button" > Favorite</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div >
+                                <a href="#" >
+                                    <img  src="images/related/8711623884.jpg" alt="">
+                                </a>
+                                <div class="caption">
+                                    <h6>Roman Agora</h6>
+                                    <button type="button" > View</button>
+                                    <button type="button" > Favorite</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div >
+                                <a href="#" >
+                                    <img  src="images/related/9498388516.jpg" alt="">
+                                </a>
+                                <div >
+                                    <h6>Temple of Asclepius</h6>
+                                    <button type="button" > View</button>
+                                    <button type="button" > Favorite</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="holder">
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="row">
+                                        <h4>Share YourTravels</h4>
+                                        <p>This is a case study from the textbook <em>Fundamentals of Web Development</em>. This book is published by Pearson Ed, and is the only textbook that covers the essentials of the entire field of contemporary web development. </p>
+                                    </div>
+                                    <div class="row">
+                                        <div >
+                                            <h5>Headquarters</h5>
+                                            Mount Royal University<br>
+                                            4825 Mount Royal Gate SW<br>
+                                            Calgary, Canada, T3E 6K6
+                                        </div>
+                                        <div>
+                                            <h5>Follow Us</h5>
+                                            <button type="button" >
+                                                Camera
+                                            </button>
+                                            <button type="button" >
+                                                User
+                                            </button>    
+                                            <button type="button" >
+                                                Tags
+                                            </button>    
+                                            <button type="button" >
+                                                Bookmark
+                                            </button>          
+                                            <button type="button" >
+                                                Fire
+                                            </button>                                                                                                     
+                                        </div>                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+
+                                <h5> Recent Posts</h5>
+                                <div class="row">
+                                    <a  href="#">
+                                        <img  src="images/footer/6592294487.jpg" alt="...">
+                                    </a>
+                                    <div >
+                                        <p ><a href="#">Calgary in the Snow</a></p>
+                                        <em>5 minutes ago</em>
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <a href="#">
+                                        <img  src="images/footer/6114904363.jpg" alt="...">
+                                    </a>
+                                    <div >
+                                        <p ><a href="#">Mountain Climbing</a></p>
+                                        <em>11 minutes ago</em>
+                                        <hr>
+                                    </div>
+                                </div>   
+                                <div class="row">
+                                    <a  href="#">
+                                        <img  src="images/footer/5856697109.jpg" alt="...">
+                                    </a>
+                                    <div >
+                                        <p ><a href="#">Nova Scotia</a></p>
+                                        <em>23 minutes ago</em>
+                                    </div>
+                                </div>                
+
+                            </div>
+                            <div class="col-sm-3">
+
+                                <h5> Contact us</h5>
+                                <form role="form">
+                                    <div>
+                                        <label class="sr-only" for="name">Name</label>
+                                        <input type="text"  name="email" placeholder="Enter name ...">
+                                    </div> 
+                                    <div >
+                                        <label class="sr-only" for="email">Email</label>
+                                        <input type="email"  name="email" placeholder="Enter email ...">
+                                    </div> 
+                                    <div >
+                                        <label class="sr-only" for="email">Email</label>
+                                        <textarea  rows="3" placeholder="Enter message ..."></textarea>
+                                    </div>   
+                                    <button type="submit" >Submit</button>
+                                </form>  
+
+                            </div>                                    
+
+                        </div>  
+                    </div>
+                </nav>
+                <div class="topHeaderRow">
+                    <div class="nav justify-content-center">
+                        <div >
+                            <p>Copyright &copy; 2017 Creative Commons ShareAlike</p>
+                            <p><a href="#">Home</a> / <a href="#">About</a> / <a href="#">Contact</a> / <a href="#">Browse</a></p>
+                        </div>            
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    </body>
+
+</html>

@@ -1,0 +1,42 @@
+.topHeaderRow{
+    background-color: #192679;
+}
+.holder{
+    background-color: #314299;
+}
+#pics{
+    padding-right: 10px;
+}
+.navbar-collapse.collapse.in {
+  display: block!important;
+}
+li.borderless {
+  border-bottom: 0 none;
+}
+#info{
+    list-style-type: none;
+    padding-top: 10px;
+    background-color: white;
+    border-style: groove;
+    border-width: thin;
+}
+#unbulletedList{
+    list-style:none;
+}
+body{
+    background-color:#e8eaf5;
+}
+.top{
+    background-color: #192679;
+}
+
+.button{
+    background-color: white;
+    border-style: groove;
+    border-width: thin;
+    width: auto;
+}
+
+.buttonGroup{
+    padding-top: 10px;
+}
