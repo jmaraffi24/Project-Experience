@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Popular shows | WatchSomething</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" type="text/css" href="../style/main.css">
+	<link rel="stylesheet" href="../style/fonts.css">
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav>
+	<div class="logo">
+		<a href="../index.html"><h3>Watch<span><img src="../images/glasses.svg" width="25px" alt="Glasses"></span>Something</h3></a>
+	</div>
+	 <!-- The Menu -->
+	 <div class="menu">
+			<ul>
+				<li class="list"><a href="../movies/latest-movies.html">Movies</a></li>
+				<li class="list"><a href="series-latest.html">TV Shows</a></li>
+				<li class="list"><a href="../watchlist.html">Watchlist</a></li>
+				<li class="list"><a href="../favorites.html">Favorites</a></li>
+			</ul>
+		</div>
+<!-- The burger menu for small screens -->
+<div class="burger">
+	<span></span>
+	<span></span>
+	<span></span>
+</div>
+<!-- Slide menu for small screens -->
+<div class="slide">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li id="smallScreenMovies">Movies<span><i class="ion-chevron-down"></i></span>
+			<ul id="moviesDropdown">
+				<li><a href="../movies/search-movies.html">Search movies</a></li>
+				<li><a href="../movies/top-rated.html">Top rated</a></li>
+				<li><a href="../movies/popular-movies.html">Popular movies</a></li>
+				<li><a href="../movies/latest-movies.html">Latest movies</a></li>
+			</ul>
+		</li>
+		<li id="smallScreenSeries">Series<span><i class="ion-chevron-down"></i></span>
+			<ul id="seriesDropdown">
+				<li><a href="search-series.html">Search tv shows</a></li>
+				<li><a href="series-popular.html">Popular tv shows</a></li>
+				<li><a href="series-toprated.html">Top rated</a></li>
+				<li><a href="series-latest.html">On air</a></li>
+			</ul>
+		</li>
+		<li class="list" id="smallScreenList">My Lists<span class="drop"><i class="ion-chevron-down"></i></span></a>
+			<ul id="myListsDropdown">
+			   <li><a href="../watchlist.html">Watchlist</a>
+			   <li><a href="../favorites.html">Favorites</a>
+			</ul>
+		</li>
+		<li class="list"><a id="randomTvShowSmall">Random tv show</a></li>
+	</ul>
+</div>
+</nav>
+<!-- Submenu -->
+<div class="submenu">
+	<li><a href="search-series.html">search tv shows</a></li>
+	<li><a href="series-toprated.html">Top rated tv shows</a></li>
+	<li><a href="series-latest.html">On air tv shows</a></li>
+	<li><a id="randomTvShow">Random tv show</a></li>
+</div>
+<!-- Spinner -->
+<div class="spinner"></div>	
+<!-- Container -->
+	<div class="container">
+		<h1>Popular series</h1>
+	</div>
+	    <!-- Notifications -->
+		<div class="notification" id="added"></div>
+		<div class="notification" id="alreadyStored"></div>
+		<!-- Smooth scroll to top button -->
+        <button id="scrollToTop"><i class="material-icons upArrow">expand_less</i></button>
+<!-- Showcase - lists popular tv shows -->
+	<div class="showcase">
+		<div id="movies" class="moviesRows"></div>
+
+	</div>
+	<!-- Random tv show container -->
+	<div class="randomContainer"></div>
+	<!-- Buttons for Pages -->
+	<div class="pages">
+        <button id="prev" title="Previous page">PREVIOUS</button>
+		<button id="next" title="Next page">NEXT</button>
+    </div>
+<!-- Script links -->
+<script src="../scripts/config.js"></script>
+<script src="../scripts/series/series-popular.js"></script>
+<script src="../scripts/global.js"></script>
+<!-- Axios link -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>
